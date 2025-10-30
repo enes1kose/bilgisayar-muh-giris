@@ -25,6 +25,10 @@ def hesap_makinesi():
         sonuc = sayi1 - sayi2
     elif islem == '*':
         sonuc = sayi1 * sayi2
+    elif islem == "/":
+        sonuc = sayi1 / sayi2
+    elif sayi2 == 0:
+        print("Payda 0 olamaz.")
     
     
     print(f"Sonuç: {sonuc}")
