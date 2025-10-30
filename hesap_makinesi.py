@@ -4,10 +4,10 @@ def hesap_makinesi():
     print("Basit Hesap Makinesi (Sadece Toplama ve Çıkarma)")
     
     # Kullanıcıdan işlem tipini al
-    islem = input("Yapmak istediğiniz işlemi seçin (+ veya -): ")
+    islem = input("Yapmak istediğiniz işlemi seçin (+, - veya *): ")
     
-    if islem not in ['+', '-']:
-        print("Geçersiz işlem! Sadece + veya - kullanabilirsiniz.")
+    if islem not in ['+', '-', '*']:
+        print("Geçersiz işlem! Sadece + veya - veya *  kullanabilirsiniz.")
         return  # Fonksiyonu sonlandırır
     
     # Kullanıcıdan sayıları al
@@ -21,8 +21,11 @@ def hesap_makinesi():
     # İşlem yap ve sonucu göster
     if islem == '+':
         sonuc = sayi1 + sayi2
-    else:  # islem == '-'
+    elif islem == '-':
         sonuc = sayi1 - sayi2
+    elif islem == '*':
+        sonuc = sayi1 * sayi2
+    
     
     print(f"Sonuç: {sonuc}")
 
